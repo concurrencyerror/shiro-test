@@ -4,11 +4,9 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 @Data
-@TableName("privilege_relation")
-public class PrivilegeRoleRelation {
-    private String id;
-
+@TableName("role_user_relation")
+public class RoleUserRelation {
+    private Long id;
     private String roleId;
-
-    private String privilege;
+    private String username;
 }

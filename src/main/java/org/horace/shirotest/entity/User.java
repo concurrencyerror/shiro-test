@@ -3,10 +3,12 @@ package org.horace.shirotest.entity;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @TableName("user")
 public class User {
-    private String id;
+    private Long id;
 
     //用户名
     private String username;
@@ -18,7 +20,7 @@ public class User {
     private String salt;
 
     //加密次数
-    private String enCodeTime;
+    private String encodeTime;
 
-
+    private List<String> roleIds;
 }
