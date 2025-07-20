@@ -2,13 +2,9 @@ package org.horace.shirotest.modelTest;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.crypto.SecureRandomNumberGenerator;
 import org.apache.shiro.crypto.hash.Sha256Hash;
-import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.mgt.DefaultSecurityManager;
-import org.apache.shiro.realm.SimpleAccountRealm;
 import org.apache.shiro.subject.Subject;
-import org.horace.shirotest.config.MyRealm;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;

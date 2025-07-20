@@ -1,8 +1,6 @@
 package org.horace.shirotest.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.apache.shiro.crypto.SecureRandomNumberGenerator;
-import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.horace.shirotest.entity.User;
 import org.horace.shirotest.service.UserService;
 import org.horace.shirotest.util.JacksonUtil;
@@ -20,11 +18,8 @@ public class InitUserController {
     public String init() {
         User user = new User();
         user.setUsername("horace");
-        String passwordSalt = new SecureRandomNumberGenerator().nextBytes().toString();
-        String encodingPassWord = new Sha256Hash("horace1234", passwordSalt, 2).toString();
-        user.setPassword(encodingPassWord);
-        user.setSalt(passwordSalt);
-        user.setEncodeTime("2");
+        //密码和盐的生成
+
         userService.save(user);
         return JacksonUtil.toJson(user);
     }
